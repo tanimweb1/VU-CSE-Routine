@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom, #d0eaff, #89cff0);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #0066cc;
+}
+
+header p {
+  font-size: 1rem;
+  color: #444;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  flex: 1;
+}
+
+.subject-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  flex: 1 1 300px;
+  max-width: 300px;
+}
+
+.subject-card h2 {
+  text-align: center;
+  color: #00509e;
+  margin-bottom: 15px;
+}
+
+.task {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.task label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.task input[type="text"],
+.task input[type="date"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  background: #f9f9f9;
+}
+
+.task input[readonly] {
+  background: #f3f3f3;
+  cursor: not-allowed;
+}
+
+.task input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #e6f2ff;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .subject-card {
+    width: 90%;
+  }
+}
